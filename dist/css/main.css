@@ -4,6 +4,7 @@
   margin: 0;
   box-sizing: border-box; }
 
+/* Mobile view 375 x 665 */
 body {
   font-family: 'Chivo', sans-serif;
   overflow-x: hidden; }
