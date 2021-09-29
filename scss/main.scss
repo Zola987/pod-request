@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400&display=swap');
+
+$lightGreen: #54e6af;
+$grey: #2c344b;
+$black: #121725;
+$white: #ffffff;
+$lightGrey: #c2cbe5;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Chivo', sans-serif;
+  overflow-x: hidden;
+}
+
+.container::before {
+  content: '';
+  background-image: url(image-host.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.05;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: $black;
+
+  .logo_container {
+    img {
+      opacity: 0.4;
+    }
+
+    .small {
+      visibility: hidden;
+      font-weight: 800;
+      margin: -35px 0 0 30px;
+      width: 190px;
+      height: 14px;
+      color: #fb3e3e;
+    }
+  }
+  .logo {
+    padding-top: 62px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h1 {
+    margin-top: 57px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 38px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $lightGreen;
+  }
+
+  h1 strong {
+    font-weight: 300;
+    letter-spacing: -0.5px;
+    color: $white;
+  }
+
+  p {
+    margin: 16px 24px 33px 24px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: $lightGrey;
+  }
+
+  .pod-logos {
+    width: 315px;
+    height: 17px;
+    margin: 0 auto;
+
+    .pod-logos img:hover {
+      opacity: 1;
+    }
+
+    .logo-spotify {
+      width: 55px;
+      margin-right: 19px;
+    }
+
+    .logo-apple {
+      width: 45px;
+      margin-right: 21px;
+    }
+
+    .logo-google {
+      width: 73px;
+      margin-right: 11px;
+    }
+
+    .logo-pocket {
+      width: 77px;
+      height: 16px;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  input {
+    border: 0;
+    outline: 0;
+    height: 46px;
+    margin: 48px 24px 16px 24px;
+    width: clamp(100px, 100%, 375px);
+    padding: 9px 32px;
+    background: $grey;
+    border-radius: 28px;
+    font-family: Chivo;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    color: $white;
+  }
+
+  button {
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    height: 46px;
+    margin: 0 24px 0 24px;
+    width: clamp(100px, 100%, 375px);
+    background: $lightGreen;
+    border-radius: 28px;
+    font-family: 'Chivo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: -0.05px;
+    color: $black;
+
+    &:hover {
+      background: #b3ffe2;
+    }
+  }
+}
+
+/* Tablet view 768 x 1024 */
+
+@media (min-width: 768px) {
+  body {
+    background: $black;
+  }
+
+  .container::before {
+    display: none;
+  }
+
+  .container {
+    display: block;
+    background: url(image-host-tablet.jpg) top right no-repeat,
+      url(bg-pattern-dots.svg) bottom left 30px no-repeat, $black;
+    padding-left: 39px;
+
+    .logo {
+      padding-top: 50px;
+      margin: 0 0 152px 0;
+    }
+
+    h1 {
+      opacity: 0.95;
+    }
+
+    p {
+      opacity: 0.8;
+    }
+
+    .logo_container {
+      display: flex;
+      flex-direction: column;
+      width: 635px;
+      height: 509px;
+      background-color: $black;
+    }
+
+    h1 {
+      margin-top: 0;
+      padding-top: 93px;
+      margin-bottom: 31px;
+      font-size: 48px;
+      line-height: 56px;
+      font-weight: 300;
+      text-align: left;
+      text-transform: uppercase;
+    }
+
+    p {
+      margin: 0;
+      max-width: 445px;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 28px;
+      text-align: left;
+    }
+
+    form {
+      display: inline;
+    }
+
+    input {
+      margin: 40px 0;
+      width: 427px;
+      height: 56px;
+    }
+
+    button {
+      margin-left: -172px;
+      width: 162px;
+      height: 46px;
+    }
+
+    .pod-logos {
+      order: 100000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 536px;
+      height: 29px;
+      margin: 43px 0 22px 0;
+      opacity: 0.8;
+
+      .logo-spotify {
+        width: 96px;
+        height: 29px;
+        margin-right: 0;
+      }
+
+      .logo-apple {
+        width: 78px;
+        height: 29px;
+        margin-right: 0;
+      }
+
+      .logo-google {
+        width: 125px;
+        height: 18px;
+        margin-right: 0;
+      }
+
+      .logo-pocket {
+        width: 129px;
+        height: 26px;
+      }
+    }
+  }
+}
+
+/* Desktop view 1440 x 900 */
+
+@media screen and (min-width: 1000px) {
+  .container::before {
+    display: none;
+  }
+
+  .container {
+    display: block;
+    background: url(bg-pattern-dots.svg) top 715px right no-repeat,
+      url(image-host-desktop.jpg) top 127px right no-repeat, $black;
+    padding-left: 165px;
+
+    .logo {
+      outline: none;
+      padding-top: 102px;
+      margin: 0 0 103px 0;
+    }
+
+    .logo_container {
+      width: 723px;
+      height: 509px;
+    }
+
+    h1 {
+      padding-top: 88px;
+      margin-bottom: 24px;
+      font-size: 52px;
+      line-height: 62px;
+    }
+
+    .logo-spotify {
+      margin-right: 6px;
+    }
+  }
+}
